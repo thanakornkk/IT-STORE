@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FC205FB5-A014-432B-9320-A0ABDB396294}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>IT_STORE</RootNamespace>
+    <AssemblyName>IT STORE</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>com_14897.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector NET 8.3.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.5.1.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.5.1\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="Saladpuk.EMVCo, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Saladpuk.EMVCo.1.1.1\lib\netstandard2.0\Saladpuk.EMVCo.dll</HintPath>
+    </Reference>
+    <Reference Include="Saladpuk.EMVCo.Contracts, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Saladpuk.EMVCo.Contracts.1.0.1\lib\netstandard2.0\Saladpuk.EMVCo.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Saladpuk.PromptPay, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Saladpuk.PromptPay.3.0.1\lib\netstandard2.0\Saladpuk.PromptPay.dll</HintPath>
+    </Reference>
+    <Reference Include="Saladpuk.PromptPay.Contracts, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Saladpuk.PromptPay.Contracts.3.0.1\lib\netstandard2.0\Saladpuk.PromptPay.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ac.Designer.cs">
+      <DependentUpon>ac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forgetpassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forgetpassword.Designer.cs">
+      <DependentUpon>forgetpassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formload.Designer.cs">
+      <DependentUpon>Formload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="order.Designer.cs">
+      <DependentUpon>order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment.Designer.cs">
+      <DependentUpon>payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PC.Designer.cs">
+      <DependentUpon>PC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="producttype.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="producttype.Designer.cs">
+      <DependentUpon>producttype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="record.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="record.Designer.cs">
+      <DependentUpon>record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="recordadmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recordadmin.Designer.cs">
+      <DependentUpon>recordadmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="recordControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="recordControl1.Designer.cs">
+      <DependentUpon>recordControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shop.Designer.cs">
+      <DependentUpon>shop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shopcontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="shopcontrol.Designer.cs">
+      <DependentUpon>shopcontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="signin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="signin.Designer.cs">
+      <DependentUpon>signin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="status.Designer.cs">
+      <DependentUpon>status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="statusControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="statusControl1.Designer.cs">
+      <DependentUpon>statusControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock.Designer.cs">
+      <DependentUpon>stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stockControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="stockControl.Designer.cs">
+      <DependentUpon>stockControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="store.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="store.Designer.cs">
+      <DependentUpon>store.cs</DependentUpon>
+    </Compile>
+    <Compile Include="track.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="track.Designer.cs">
+      <DependentUpon>track.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ac.resx">
+      <DependentUpon>ac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forgetpassword.resx">
+      <DependentUpon>forgetpassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formload.resx">
+      <DependentUpon>Formload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="order.resx">
+      <DependentUpon>order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment.resx">
+      <DependentUpon>payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC.resx">
+      <DependentUpon>PC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="producttype.resx">
+      <DependentUpon>producttype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="record.resx">
+      <DependentUpon>record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="recordadmin.resx">
+      <DependentUpon>recordadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="recordControl1.resx">
+      <DependentUpon>recordControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shop.resx">
+      <DependentUpon>shop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shopcontrol.resx">
+      <DependentUpon>shopcontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signin.resx">
+      <DependentUpon>signin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="status.resx">
+      <DependentUpon>status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="statusControl1.resx">
+      <DependentUpon>statusControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock.resx">
+      <DependentUpon>stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stockControl.resx">
+      <DependentUpon>stockControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="store.resx">
+      <DependentUpon>store.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="track.resx">
+      <DependentUpon>track.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BACKLOGIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyeshow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyehide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGSIGNIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGforget.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barwel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barMANISI IT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barnew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btpc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btmnt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btlt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btgg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showmanisi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGAC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTAC %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_5406.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGAC %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGfsign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btsubmit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Total.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Total %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGstatus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\STATUS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MANISI IT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGREC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGREC %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGREC %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOG OUT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGEDIT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PC %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MONITORR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LAP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\STATUS %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GAMIINGGEAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RECORDa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="com_14897.ico" />
+    <None Include="Resources\showmanisi1.png" />
+    <None Include="Resources\pg %281%29.png" />
+    <None Include="Resources\pg.png" />
+    <None Include="Resources\MANISIIT1.png" />
+    <None Include="Resources\bass.png" />
+    <None Include="Resources\lover %281%29.png" />
+    <None Include="Resources\ADD %281%29.png" />
+    <None Include="Resources\lover2.png" />
+    <None Include="Resources\lovev.png" />
+    <None Include="Resources\lover1.png" />
+    <None Include="Resources\lover.png" />
+    <None Include="Resources\ADD.png" />
+    <None Include="Resources\MANISI.png" />
+    <None Include="Resources\BGAC %282%29.png" />
+    <None Include="Resources\Trackings %281%29.png" />
+    <None Include="Resources\Trackings.png" />
+    <None Include="Resources\HISTORsY.png" />
+    <None Include="Resources\up.png" />
+    <None Include="Resources\down1.png" />
+    <None Include="Resources\Tracking.png" />
+    <None Include="Resources\SUBMITbt.png" />
+    <None Include="Resources\back bt %281%29.png" />
+    <None Include="Resources\back bt.png" />
+    <None Include="Resources\CANCEL.png" />
+    <None Include="Resources\EDIT ACCOUNT.png" />
+    <None Include="Resources\btdlacc.png" />
+    <None Include="Resources\update_5305868.png" />
+    <None Include="Resources\transparent-refresh-icon-5dbe664a904bb7.5789658615727591145911.png" />
+    <None Include="Resources\transparent-refresh-icon-5dbe664a904bb7.578965861572759114591.png" />
+    <None Include="Resources\stom.png" />
+    <None Include="Resources\sto %281%29.png" />
+    <None Include="Resources\STOCK.png" />
+    <None Include="Resources\bas %281%29.png" />
+    <None Include="Resources\bas.png" />
+    <None Include="Resources\bartotal %281%29.png" />
+    <None Include="Resources\bartotal.png" />
+    <None Include="Resources\basket.png" />
+    <None Include="Resources\manisipage %282%29.gif" />
+    <None Include="Resources\manisipage %281%29.gif" />
+    <None Include="Resources\manisipage.gif" />
+    <None Include="Resources\BGsignup.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
